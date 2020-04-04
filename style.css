@@ -1,3 +1,9 @@
 #style-test {
     background-color: purple;
 }
+
+#current-weather {
+    background-color: purple;
+    height: 400px;
+    width: 400 px;
+}
