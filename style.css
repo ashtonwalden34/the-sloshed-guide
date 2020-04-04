@@ -2,8 +2,18 @@
     background-color: purple;
 }
 
+header {
+    text-align: center;
+    height: 100px;
+    background-color: black;
+    color: gold;
+    font-size: 100px;
+    font-family: 'Special Elite', cursive;
+}
+
 #current-weather {
     background-color: purple;
     height: 400px;
     width: 400 px;
 }
+
