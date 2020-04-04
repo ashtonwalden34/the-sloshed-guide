@@ -4,7 +4,7 @@
 
 // Search by zip code https://api.openbrewerydb.org/breweries?by_postal=44107
 
-
+let searchResults = [];
 
 
 
@@ -71,3 +71,29 @@ function byZip() {
 };
 
 byZip();
+
+// Function to loop through array of search results returned from ajax call and renders all array values onto page as separate buttons
+function renderSearchResults () {
+    $("#search-results").empty();
+
+    // For loop to cycle through search results array
+    for (var i = 0; i < searchResults.length; i++) {
+
+        var a = $("PLACEHOLDER FOR SEARCH BUTTON");
+
+        a.attr("data-name", searchResults[i]);
+
+        a.text(searchResults[i]);
+
+        $("#search-results").append(a);
+    }
+};
+
+// Click event to push search results into an array that can be displayed on the DOM
+$("PLACEHOLDER FOR SEARCH BUTTON").on("click", function(event) {
+    event.preventDefault();
+    let searchTerm = $("PLACEHOLDER FOR SEARCH BUTTON INPUT FIELD").val.trim();
+    searchResults.push("CHANGE TO AJAX CALL RESULTS");
+    renderSearchResults();
+    console.log(searchTerm);
+});
