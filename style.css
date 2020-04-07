@@ -3,6 +3,7 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #searchBarContainer{
     border: solid red 1px;
 =======
@@ -11,4 +12,14 @@
     height: 400px;
     width: 400 px;
 >>>>>>> c4fd5996027226205b9b47042ed5126474746f13
+=======
+header {
+    text-align: center;
+}
+
+#current-weather {
+    background-color: purple;
+    height: 400px;
+    width: 400px;
+>>>>>>> 384fdd8a46916ff9defa161e1daf0d880762c201
 }
