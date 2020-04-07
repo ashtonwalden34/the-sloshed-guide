@@ -1,25 +1,58 @@
-#style-test {
-    background-color: purple;
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-#searchBarContainer{
-    border: solid red 1px;
-=======
-#current-weather {
-    background-color: purple;
-    height: 400px;
-    width: 400 px;
->>>>>>> c4fd5996027226205b9b47042ed5126474746f13
-=======
 header {
+    text-align: center;
+    height: 100px;
+    background-color: black;
+    color: gold;
+    font-size: 100px;
+    font-family: 'Special Elite', cursive;
     text-align: center;
 }
 
-#current-weather {
-    background-color: purple;
-    height: 400px;
-    width: 400px;
->>>>>>> 384fdd8a46916ff9defa161e1daf0d880762c201
+#row{
+    height: 100%;
 }
+
+#searchBars{
+    background-color: gold;
+}
+
+label{
+    font-family: 'Special Elite', cursive;
+    color: black;
+}
+
+.searchBarOr{
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    color: black;
+}
+
+
+#searchResults{
+    background-color: black;
+    height: 500px;
+}
+
+.breweryResults{
+    background-color: black;
+    height: 40%;
+}
+
+.breweryListItem{
+    padding: 1px;
+    color: gold;
+    font-family: 'Special Elite', cursive;
+}
+
+
+.currentWeather{
+    background-color: gold;
+    height: 40%;
+}
+
+.weatherConditions{
+    color: black;
+    font-family: 'Special Elite', cursive;
+    
+}
+
