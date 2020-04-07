@@ -2,13 +2,27 @@
     background-color: purple;
 }
 
-<<<<<<< HEAD
+
 #searchBarContainer{
     border: solid red 1px;
-=======
+
+header {
+    text-align: center;
+    height: 100px;
+    background-color: black;
+    color: gold;
+    font-size: 100px;
+    font-family: 'Special Elite', cursive;
+}
+
+
 #current-weather {
     background-color: purple;
     height: 400px;
     width: 400 px;
->>>>>>> c4fd5996027226205b9b47042ed5126474746f13
+
 }
+
+}
+
+
