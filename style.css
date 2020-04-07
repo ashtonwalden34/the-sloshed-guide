@@ -1,28 +1,52 @@
-#style-test {
-    background-color: purple;
+body {
+    background-color: black;
+    
 }
+
 
 
 #searchBarContainer{
     border: solid red 1px;
+}
 
 header {
     text-align: center;
     height: 100px;
-    background-color: black;
+    background-image: linear-gradient(to top,gold, 10%, black);
     color: gold;
     font-size: 100px;
-    font-family: 'Special Elite', cursive;
+    font-family: 'Ultra', serif;
+    font-size: xx-large;
+    margin: 0;
 }
-
 
 #current-weather {
     background-color: purple;
-    height: 400px;
-    width: 400 px;
+    height: 200px;
+    width: 400px;
 
 }
 
+#current-weather1 {
+    background-color: greenyellow;
+    height: 200px;
+    width: 400px;
 }
 
+.row {
+    background-color: whitesmoke;
+}
 
+p {
+    
+    color: gold;
+    font-weight: bold;
+    padding: 0;
+}
+
+footer {
+    height: 100px;
+    background-image: linear-gradient(to bottom,gold, 10%, black);
+    text-align: center;
+    color: gold;
+}

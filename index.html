@@ -7,41 +7,57 @@
     <title>The sloshed Guide</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    
-    
-    <link rel="stylesheet" href="./style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="animate.min.css">
 </head>
 
 
-    <div class="container">
-
-        <div class="col offset-s1" id="searchBarContiner">
-            <input id="searchInput" type="text">
-            <label for="searchInput">Please enter Brewery name</label>
-        </div>
     
-    
-
 <body>
     <header>
-        <div class="row">
-            <div class="header col s12"><span class="flow-text"> The Sloshed Guide</span></div>
+        <div class="container-fluid">
+            
+            <h1><i class="fa fa-beer"></i> The Sloshed Guide <i class="fa fa-beer"></i></h1>
         </div>
     </header>
     
+    
+    <div class="row">
+
+        <div class="col s12 m4 l3"> <!-- Note that "m4 l3" was added -->
         
-    <div id="current-weather"></div>
-    <p id="style-test">Hello world, let's test some stuff</p>
-    <p>This is David testing stuff</p>
+        <div class="col offset-s1" id="searchBarContiner">
+            <input id="searchInput" type="text">
+                <label for="searchInput">Please enter Brewery name</label>
+        </div>
+        
+        
+        <div class="col offset-s1" id="searchBarContiner">
+            <input id="searchInput" type="text">
+                <label for="searchInput">Please enter City name</label>
+        </div>
 
-</div>
+        </div>
 
-    <div id="current-weather"></div>
+        <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
+        
+            <div id="current-weather"></div>
+        
+            <div id="current-weather1"></div>
+        </div>
 
-    <div id="search-results"></div>
+    </div>
+    
+    <footer>
+        <p>Project 1</p>
+    </footer>
+        
+    
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="./script.js"></script>    
+
 </body>
 </html>
