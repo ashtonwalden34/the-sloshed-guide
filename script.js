@@ -1,3 +1,11 @@
+// Parsed moment.js time and date values
+const m = moment();
+const date = m.format("dddd, MMMM Do YYYY");
+const time = m.format("h:mm a");
+
+
+
+
 // Search for brewery by searchTerm https://api.openbrewerydb.org/breweries/search?query=dog
 
 // Search for single brewery https://api.openbrewerydb.org/breweries/5494
@@ -11,7 +19,7 @@ let searchResults = [];
 
 function displayCityWeather() {
     
-    let queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + "Denver" + "&appid=db5176658b0dab6a2aa19e11a0e01748";
+    let queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + "Sydney" + "&appid=db5176658b0dab6a2aa19e11a0e01748";
     console.log(queryURL);
 
     $.ajax({
@@ -24,13 +32,35 @@ function displayCityWeather() {
         let tempKelvin = response.main.temp;
         let tempC = (tempKelvin - 273.15).toFixed(1);
         let tempF = (tempC * 1.8 + 32).toFixed(0);
+        let latitude = response.coord.lat;
+        let longitude = response.coord.lon;
+        let icon = response.weather[0].icon;
+        let iconURL = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
+
+
+        // div to hold and display current weather data for the searched city
+        let currentWeatherDiv = $("<div class='currentWeather'>");
+
+        //Weather icon
+        let currentIcon = $("<img>").attr("src", iconURL);
+        currentWeatherDiv.append(currentIcon);
+
+        //compile and display current temperature information
+        let pTemp = $("<p>").text("Temperature: " + tempF + " F" + " (" + tempC + " C)");
+        currentWeatherDiv.append(pTemp);
+
+        //placing all current weather variables into HTML
+        $(".currentWeather").prepend(currentWeatherDiv);
+
 
         console.log(name);
         console.log(tempKelvin);
         console.log(tempC);
         console.log(tempF);
-    })
-};
+
+        })
+
+    };
 
 displayCityWeather();
 
@@ -62,13 +92,12 @@ function byZip() {
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function(response)  
+    }).then(function(response) {
         
 
 
-        let searchResults = response;
+    let searchResults = response;
        brewList = searchResults;
-        master
         //variables to capture API response properties
         console.log(response[0].name);
         console.log(response[1].name);
@@ -108,6 +137,8 @@ $("#btn-brewSearch").on("click", function(event) {
 brewapiresults
     console.log(searchTerm);
 });
+
+
 
   // function for brewery list
   function addbrew(){
@@ -158,7 +189,7 @@ brewapiresults
         const webButton =  document.createElement('a')
         newContainer.append(webButton)
         webButton.outerHTML = "<a class=website href="+website+">"+website+"</a>"
-        }}
+        }};
 
-});
+
  
