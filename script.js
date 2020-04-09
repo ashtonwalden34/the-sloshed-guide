@@ -56,45 +56,56 @@ bySearchTerm();
 
 function byZip() {
     
-    let queryURL = "https://api.openbrewerydb.org/breweries?by_postal=84101";
+    let queryURL = "https://api.openbrewerydb.org/breweries?by_postal=97209";
     console.log(queryURL);
 
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function(response) {
-        brewList = response;
+    }).then(function(response)  
+        
+
+
+        let searchResults = response;
+       brewList = searchResults;
+        master
         //variables to capture API response properties
-        let name = response[2].name;
-        console.log(name);
+        console.log(response[0].name);
+        console.log(response[1].name);
+        console.log(response[2].name);
+        console.log(response[3].name);
+        console.log(searchResults);
     })
 };
 
 byZip();
 
 // Function to loop through array of search results returned from ajax call and renders all array values onto page as separate buttons
-function renderSearchResults () {
+function renderSearchResults (searchResults) {
     $("#search-results").empty();
 
     // For loop to cycle through search results array
     for (var i = 0; i < searchResults.length; i++) {
 
-        var a = $("PLACEHOLDER FOR SEARCH BUTTON");
+        var a = $("btn-brewSearch");
 
         a.attr("data-name", searchResults[i]);
 
         a.text(searchResults[i]);
 
         $("#search-results").append(a);
+
+        console.log(a);
     }
 };
 
 // Click event to push search results into an array that can be displayed on the DOM
-$("PLACEHOLDER FOR SEARCH BUTTON").on("click", function(event) {
+$("#btn-brewSearch").on("click", function(event) {
     event.preventDefault();
-    let searchTerm = $("PLACEHOLDER FOR SEARCH BUTTON INPUT FIELD").val.trim();
+    let searchTerm = $("#searchInput").val().trim();
     searchResults.push("CHANGE TO AJAX CALL RESULTS");
     renderSearchResults();
+brewapiresults
     console.log(searchTerm);
 });
 
@@ -148,3 +159,6 @@ $("PLACEHOLDER FOR SEARCH BUTTON").on("click", function(event) {
         newContainer.append(webButton)
         webButton.outerHTML = "<a class=website href="+website+">"+website+"</a>"
         }}
+
+});
+ 

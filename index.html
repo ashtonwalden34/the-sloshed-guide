@@ -3,35 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Sloshed Guide</title>
+
+    <title>The sloshed Guide</title>
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
-
-    
-    
     <link rel="stylesheet" href="./style.css">
-
 </head>
 
 <body>
-    <header>
-        <div class="row">
-            <div class="header col s12"><span class="flow-text"> The Sloshed Guide</span></div>
-        </div>
-    </header>
+    <div class="container">
+
+         <header>
+            <div class="row" id="header">
+            <div class="header col s12">
+                <span class="flow-text"> The Sloshed Guide</span>
+            </div>
     
+        </header>
         
-    <div id="current-weather"></div>
-    <p id="style-test">Hello world, let's test some stuff</p>
-    <p>This is David testing stuff</p>
+        <div class="row">
+            <div class="col s3" id="searchBars">
+                <input id="searchInput1" type="text">
+                <label for="searchInput1">Please enter Brewery name</label>
+                <h5 class="searchBarOr">- OR - </h5>
+                <input id="searchInput2" type="text">
+                <label for="searchInput2">Please enter Location</label>
+            </div>
 
-    <P>test-ashton</P>
+            <div class="col s9" id="searchResults">
+                <div class="breweryResults">
+                    <ul id="breweryResultList">
+                        <li class="breweryListItem">Brewery 1</li>
+                        <li class="breweryListItem">Brewery 2</li>
+                        <li class="breweryListItem">Brewery 3</li>
+                    </ul>
+            </div>
 
-    <div id="current-weather"></div>
+             <div class="currentWeather">
+                <p class="weatherConditions">Current weather conditions:</p>
+            </div>
+        </div>
+    </div>
+    
 
-    <div id="search-results"></div>
+
+
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="./script.js"></script>    
 </body>
 </html>
