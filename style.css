@@ -1,3 +1,11 @@
+#style-test {
+    background-color: purple;
+}
+
+
+#searchBarContainer{
+    border: solid red 1px;
+
 header {
     text-align: center;
     height: 100px;
@@ -15,6 +23,7 @@ header {
 #searchBars{
     background-color: gold;
 }
+
 
 label{
     font-family: 'Special Elite', cursive;
@@ -54,5 +63,15 @@ label{
     color: black;
     font-family: 'Special Elite', cursive;
     
+
+
+#current-weather {
+    background-color: purple;
+    height: 400px;
+    width: 400 px;
+
 }
+
+}
+
 
