@@ -75,5 +75,65 @@ label{
 }
 
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border-style: groove;
+    border-color: saddlebrown;
+    height: 20vh;
+    width: 80vw;
+    /* creates scrollbar */
+    overflow:auto;
+    }
+    #brewBox{
+        content: normal;
+    }
+    #brewBox1 , #brewBox3 {
+        background-color: white;
+    }
+    
+    #brewBox0 , #brewBox2{
+        background-color: red;
+    }
+    
+    .here{
+    height: 50vh;
+    width:80vw;
+    overflow: auto;
+    }
+    
+    .name {
+        font-size: 3vw;
+        position: relative;
+        left:0vw;
+        top:0vh;
+    }
+    
+    .website {
+        position: relative;
+        bottom: 0vw;
+        right: 0vw;
+    }
+    .address{
+        position: relative;
+        bottom: 0vw;
+        left: 0vw;
+    }
+    .phone {
+        position: relative;
+        bottom: 2vw;
+        right: 0vw;
+    }
+    .city {
+        position: relative;
+        bottom: 0vw;
+        left: 0vw;
+    }
+
+
+
 
 
