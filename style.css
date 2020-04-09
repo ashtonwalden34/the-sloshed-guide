@@ -13,7 +13,56 @@ header {
     color: gold;
     font-size: 100px;
     font-family: 'Special Elite', cursive;
+    text-align: center;
 }
+
+#row{
+    height: 100%;
+}
+
+#searchBars{
+    background-color: gold;
+}
+
+
+label{
+    font-family: 'Special Elite', cursive;
+    color: black;
+}
+
+.searchBarOr{
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    color: black;
+}
+
+
+#searchResults{
+    background-color: black;
+    height: 500px;
+}
+
+.breweryResults{
+    background-color: black;
+    height: 40%;
+}
+
+.breweryListItem{
+    padding: 1px;
+    color: gold;
+    font-family: 'Special Elite', cursive;
+}
+
+
+.currentWeather{
+    background-color: gold;
+    height: 40%;
+}
+
+.weatherConditions{
+    color: black;
+    font-family: 'Special Elite', cursive;
+    
 
 
 #current-weather {
