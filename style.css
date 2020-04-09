@@ -20,14 +20,8 @@ h1 {
     border: solid red 1px;
 } 
 
-header {
-    text-align: center;
-    height: 100px;
-    background-color: black;
-    color: gold;
-    font-size: 100px;
-    font-family: 'Special Elite', cursive;
-    text-align: center;
+.row {
+    background-color: rgba(0,0,0,0.5);
 }
 
 #row{
@@ -35,47 +29,55 @@ header {
 }
 
 #searchBars{
-    background-color: gold;
+    background-color: white;
+    height: 250px;
+    border-radius: 6px;
+    border: 2px solid black;
+    margin-top: 13px;
 }
 
 
 label{
-    font-family: 'Special Elite', cursive;
+    font-family: 'Times New Roman', Times, serif;
     color: black;
+    font-weight: bold;
 }
 
 .searchBarOr{
     text-align: center;
-    font-family: 'Special Elite', cursive;
+    font-family: 'Times New Roman', Times, serif;
     color: black;
+    padding-top: 25px;
 }
 
 
 #searchResults{
-    background-color: black;
+
     height: 500px;
 }
 
 .breweryResults{
-    background-color: black;
+    background-color: white;
     height: 40%;
+    border-radius: 6px;
 }
 
 .breweryListItem{
     padding: 1px;
-    color: gold;
-    font-family: 'Special Elite', cursive;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 
 .currentWeather{
-    background-color: gold;
+    background-color: white;
     height: 40%;
+    border-radius: 6px;
 }
 
 .weatherConditions{
     color: black;
-    font-family: 'Special Elite', cursive;
+    font-family: 'Times New Roman', Times, serif;
 }
     
 
@@ -95,9 +97,6 @@ label{
     border: 2px solid black;
 }
 
-.row {
-    background-color: rgba(0,0,0,0.5);
-}
 
 .grid {
     display: grid;
