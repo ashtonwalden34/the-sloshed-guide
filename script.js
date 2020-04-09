@@ -5,7 +5,7 @@
 // Search by zip code https://api.openbrewerydb.org/breweries?by_postal=44107
 
 let searchResults = [];
-    brewList =""
+  
 
 
 
@@ -62,21 +62,18 @@ function byZip() {
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function(response)  
+    }).then(function(response){  
         
 
 
-        let searchResults = response;
-       brewList = searchResults;
+         searchResults = response;
+       
         master
         //variables to capture API response properties
-        console.log(response[0].name);
-        console.log(response[1].name);
-        console.log(response[2].name);
-        console.log(response[3].name);
+        
         console.log(searchResults);
-    })
-};
+    });
+
 
 byZip();
 
@@ -100,25 +97,24 @@ function renderSearchResults (searchResults) {
 };
 
 // Click event to push search results into an array that can be displayed on the DOM
-$("#btn-brewSearch").on("click", function(event) {
-    event.preventDefault();
-    let searchTerm = $("#searchInput").val().trim();
-    searchResults.push("CHANGE TO AJAX CALL RESULTS");
-    renderSearchResults();
-brewapiresults
-    console.log(searchTerm);
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   alert("yes")
+   document.getElementById("myBtn").click();
+  }
 });
-
   // function for brewery list
   function addbrew(){
-    for (i=0; i< brewList.length; i++){
+    for (i=0; i< searchResults.length; i++){
         $(".brewbox").remove()
-      name = brewList[i].name
-      city = brewList[i].city
-      address = brewList[i].street 
-      type = brewList[i].brewery_type
-      phone = phone ='('+ brewList[i].phone.slice(0,3)+")"+brewList[i].phone.slice(3,6)+'-'+brewList[i].phone.slice(6,10)
-      website = brewList[i].website_url
+      name = searchResults[i].name
+      city = searchResults[i].city
+      address = searchResults[i].street 
+      type = searchResults[i].brewery_type
+      phone = phone ='('+ searchResults[i].phone.slice(0,3)+")"+searchResults[i].phone.slice(3,6)+'-'+searchResults[i].phone.slice(6,10)
+      website = searchResults[i].website_url
       newContainer = document.createElement('div')
       newContainer.className = 'brewBox container grid'
       newContainer.id = "brewBox"+i
@@ -146,7 +142,7 @@ brewapiresults
       }
       
       // Creats divs for brewery list
-      $("search-results").append(newContainer)
+      $(".breweryResults").append(newContainer)
       const varList=[name,city,address,phone]  
       altVarList=["name",'city','address','phone']
       for (x=0; x < varList.length; x++){
@@ -158,7 +154,7 @@ brewapiresults
         const webButton =  document.createElement('a')
         newContainer.append(webButton)
         webButton.outerHTML = "<a class=website href="+website+">"+website+"</a>"
-        }}
+          }}}
 
-});
+
  
