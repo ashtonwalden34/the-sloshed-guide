@@ -18,7 +18,69 @@ h1 {
 }
 #searchBarContainer{
     border: solid red 1px;
+<<<<<<< HEAD
+=======
+} 
+
+header {
+    text-align: center;
+    height: 100px;
+    background-color: black;
+    color: gold;
+    font-size: 100px;
+    font-family: 'Special Elite', cursive;
+    text-align: center;
 }
+
+#row{
+    height: 100%;
+}
+
+#searchBars{
+    background-color: gold;
+}
+
+
+label{
+    font-family: 'Special Elite', cursive;
+    color: black;
+>>>>>>> master
+}
+
+.searchBarOr{
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    color: black;
+}
+
+
+#searchResults{
+    background-color: black;
+    height: 500px;
+}
+
+.breweryResults{
+    background-color: black;
+    height: 40%;
+}
+
+.breweryListItem{
+    padding: 1px;
+    color: gold;
+    font-family: 'Special Elite', cursive;
+}
+
+
+.currentWeather{
+    background-color: gold;
+    height: 40%;
+}
+
+.weatherConditions{
+    color: black;
+    font-family: 'Special Elite', cursive;
+}
+    
 
 
 
@@ -36,9 +98,73 @@ h1 {
     border: 2px solid black;
 }
 
+<<<<<<< HEAD
 .row {
     background-color: rgba(0,0,0,0.5);
 }
+=======
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border-style: groove;
+    border-color: saddlebrown;
+    height: 20vh;
+    width: 80vw;
+    /* creates scrollbar */
+    overflow:auto;
+    }
+    #brewBox{
+        content: normal;
+    }
+    #brewBox1 , #brewBox3 {
+        background-color: white;
+    }
+    
+    #brewBox0 , #brewBox2{
+        background-color: red;
+    }
+    
+    .here{
+    height: 50vh;
+    width:80vw;
+    overflow: auto;
+    }
+    
+    .name {
+        font-size: 3vw;
+        position: relative;
+        left:0vw;
+        top:0vh;
+    }
+    
+    .website {
+        position: relative;
+        bottom: 0vw;
+        right: 0vw;
+    }
+    .address{
+        position: relative;
+        bottom: 0vw;
+        left: 0vw;
+    }
+    .phone {
+        position: relative;
+        bottom: 2vw;
+        right: 0vw;
+    }
+    .city {
+        position: relative;
+        bottom: 0vw;
+        left: 0vw;
+    }
+
+
+
+>>>>>>> master
 
 
 
