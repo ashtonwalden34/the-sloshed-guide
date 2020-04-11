@@ -14,11 +14,13 @@ zipBtn.addEventListener("keyup", function(event) {
      if (event.keyCode === 13) {
     zipInput = document.getElementById("searchInput2").value;
     breweryByZip();
+
     
     $("#searchInput2").val("")
     
     }});
     
+
 
     function breweryByZip() {
     
@@ -58,13 +60,7 @@ zipBtn.addEventListener("keyup", function(event) {
         
               addbrew()
             })};
-
-      
-
-     
-
- 
-        
+    
      
 
 // search
@@ -117,6 +113,7 @@ zipBtn.addEventListener("keyup", function(event) {
                 WeatherSearchResults = response
                    addbrew()
             })};
+
 
 
 
