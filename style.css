@@ -77,7 +77,7 @@ left:40vh;
 .grid {
     border-style: groove;
     border-color: silver;
-     background-image: url(./images/barrel.jpg);
+     /* background-image: url(./images/barrel.jpg); */
     background-repeat: round;
     background-size: 60%;
     position: relative;
