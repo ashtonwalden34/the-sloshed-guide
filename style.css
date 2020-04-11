@@ -67,7 +67,9 @@ grid-row-gap: 30px;
 height: 40%;
 position: absolute;
 top:20vh;
-left:40vh;
+left:10vh;
+overflow: auto;
+font-family: ultra;
 }
 
 
@@ -76,20 +78,18 @@ left:40vh;
 
 .grid {
     border-style: groove;
-    border-color: silver;
-     /* background-image: url(./images/barrel.jpg); */
+    background-color: silver;
+     border-color: black;
     background-repeat: round;
     background-size: 60%;
     position: relative;
-    height: 40vh;
-    width: 40vw;
-    
+    height: 35vh;
+    width: 50vw;
+    opacity: .5;
     /* creates scrollbar */
-    overflow:auto;
+    /* overflow:auto; */
     }
-    #brewBox{
-        content: normal;
-    }
+   
     /* #brewBox1 , #brewBox3 {
         background-color: white;
     }
@@ -98,19 +98,12 @@ left:40vh;
         background-color: red;
     } */
     
-    .breweryResults{
-    height: 70vh;
-    width:80vw;
-    overflow: auto;
-    font-family: ultra;
-    font-size: 1vw;
-   
-    }
+  
    
      .name {
-        font-size: 3vw;
+        font-size: 4vw;
         position: absolute;
-        top: 20%;
+        top: 10%;
         left:20%
         
        }
@@ -119,7 +112,7 @@ left:40vh;
         position: absolute;
         left: 3%;
         bottom: 19%;
-        font-size: 1.5vw;
+        font-size: 2vw;
         color:black;
     }
     
@@ -127,13 +120,13 @@ left:40vh;
         position: absolute;
         bottom: 3%;
         right: 3%;
-        font-size: 1.5vw;
+        font-size: 2vw;
     }
     .phone  {
         position: absolute;
-        bottom: 10%;
+        bottom: 20%;
         right: 3%; 
-        font-size: 1.5vw;
+        font-size: 2vw;
     }
     body{
          /* background-color: black; */
