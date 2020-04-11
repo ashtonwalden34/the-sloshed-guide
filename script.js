@@ -14,13 +14,11 @@ zipBtn.addEventListener("keyup", function(event) {
      if (event.keyCode === 13) {
     zipInput = document.getElementById("searchInput2").value;
     breweryByZip();
-
     
     $("#searchInput2").val("")
     
     }});
     
-
 
     function breweryByZip() {
     
@@ -60,7 +58,13 @@ zipBtn.addEventListener("keyup", function(event) {
         
               addbrew()
             })};
-    
+
+      
+
+     
+
+ 
+        
      
 
 // search
@@ -116,7 +120,6 @@ zipBtn.addEventListener("keyup", function(event) {
 
 
 
-
     // function to generate Brewery list in a grid
  function addbrew(){
     $(".brewBox").remove()
@@ -164,8 +167,37 @@ zipBtn.addEventListener("keyup", function(event) {
     // display weather information (this is the fun one!!!!)
    function createweather(){
     // document.getElementById('today').style.backgroundImage="url(./lib/"+iconId+"d.png)"
-    document.getElementById("sky").style.backgroundImage = "url('./images/moon.jpg')";
-    
+    iconId=WeatherSearchResults.weather[0].icon.slice(0,2)
+    icon=""
+
+    var skyIcon;
+    switch (iconId ){
+      case 01:
+       icon= "01.jpeg";
+        break;
+      case 02:
+       icon= "02.png";
+        break;
+      case 03:
+        icon = "02.png";
+        break;
+      case 04:
+        icon = "01.jpeg";
+        break;
+      case 09:
+        icon= "01.jpeg";
+        break;
+      case 10:
+        icon="01.jpeg";
+        break;
+      case 11:
+        icon="01.jpeg";
+        break;
+      default:
+        icon= "01.jpeg";
+    }
+    // x="url(./lib/"+skyIcon+")"
+    document.getElementById('sky').style.backgroundImage="url(./images/"+icon+")";
     let TemperatureDiv = document.createElement("div");
     TemperatureDiv.classList.add("temperature");
     $(".weather").append(TemperatureDiv);
