@@ -8,18 +8,16 @@ let nameInput=''
     //     by 
     //     zipcode
 
-
+//  event listener for zipcode input2
 let zipBtn=document.getElementById("searchInput2")
 zipBtn.addEventListener("keyup", function(event) {
      if (event.keyCode === 13) {
     zipInput = document.getElementById("searchInput2").value;
     breweryByZip();
-    
     $("#searchInput2").val("")
-    
     }});
     
-
+        // api Query
     function breweryByZip() {
     
         let queryURL = "https://api.openbrewerydb.org/breweries?by_postal="+zipInput;
@@ -29,43 +27,19 @@ zipBtn.addEventListener("keyup", function(event) {
             url: queryURL,
             method: "GET"
         }).then(function(response){  
-            
-    
-    
-             searchResults = response;
-           
-            searchZipWeather()
-            //variables to capture API response properties
-            
-            
+            searchResults = response;
+           searchZipWeather()
+              
         })}
         function searchZipWeather() {
-    
-            let queryURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipInput + "&units=imperial&appid=db5176658b0dab6a2aa19e11a0e01748";
+          let queryURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipInput + "&units=imperial&appid=db5176658b0dab6a2aa19e11a0e01748";
             
-        
-            $.ajax({
-                url: queryURL,
-                method: "GET"
-            }).then(function(response) {
+        $.ajax({ url: queryURL,method: "GET"})
+         .then(function(response) {
                 WeatherSearchResults = response
                 console.log(WeatherSearchResults)
-                //variables to capture API response properties
-                let name = response.name;
-                let tempKelvin = response.main.temp;
-                let tempC = (tempKelvin - 273.15).toFixed(1);
-                let tempF = (tempC * 1.8 + 32).toFixed(0);
-        
-              addbrew()
+                addbrew()
             })};
-
-      
-
-     
-
- 
-        
-     
 
 // search
 //     by  
@@ -80,7 +54,6 @@ zipBtn.addEventListener("keyup", function(event) {
         breweryBySearchTerm();
         
         $("#searchInput1").val("")
-        
         }});
 
 
@@ -88,31 +61,19 @@ zipBtn.addEventListener("keyup", function(event) {
 
                 // Query to "get" brewery by name api data
         function breweryBySearchTerm() {
-    
-            let queryURL = "https://api.openbrewerydb.org/breweries/search?query="+nameInput;
+              let queryURL = "https://api.openbrewerydb.org/breweries/search?query="+nameInput;
            
-        
-            $.ajax({
-                url: queryURL,
-                method: "GET"
-            }).then(function(response) {
-        
-                //variables to capture API response properties
+              $.ajax({url: queryURL,method: "GET"})
+              .then(function(response) {
+          //variables to capture API response properties
                  searchResults = response;
               searchCityWeather();  
-            })
-        };
+            })};
         
-        
-           // Query to "get"  by name weather api data
+        // Query to "get"  by name weather api data
         function searchCityWeather() {
-    
             let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + nameInput + "&units=imperial&appid=db5176658b0dab6a2aa19e11a0e01748";
-            
-        
-            $.ajax({
-                url: queryURL,
-                method: "GET"
+                $.ajax({url: queryURL,method: "GET"
             }).then(function(response) {
                 WeatherSearchResults = response
                    addbrew()
@@ -124,10 +85,10 @@ zipBtn.addEventListener("keyup", function(event) {
  function addbrew(){
     $(".brewBox").remove()
     for (i=0; i< searchResults.length; i++){
-        $(".brewbox").remove()
+      // remove previous search 
+      $(".brewbox").remove()
       
-      
-    //   Individual values for each div
+      //   Individual values for each div
         name = searchResults[i].name
       city = searchResults[i].city
       address = searchResults[i].street 
@@ -162,7 +123,7 @@ zipBtn.addEventListener("keyup", function(event) {
     // document.getElementById('today').style.backgroundImage="url(./lib/"+iconId+"d.png)"
     iconId=WeatherSearchResults.weather[0].icon.slice(0,2)
     icon=""
-
+    
     var skyIcon;
     switch (iconId ){
       case 01:
@@ -171,15 +132,15 @@ zipBtn.addEventListener("keyup", function(event) {
         break;
       case 02:
     //   few clouds 
-      icon= "02.png";
+      icon= "02.jpg";
         break;
       case 03:
     //   cloudy  
-      icon = "03-clouds.png";
+      icon = "03-clouds.jpg";
         break;
       case 04:
     //   cloudy  
-      icon = "01.jpg";
+      icon = "03-clouds.jpg";
         break;
       case 09:
     //   rain  
@@ -203,9 +164,10 @@ zipBtn.addEventListener("keyup", function(event) {
     //   mist
         icon="01.jpg" 
     }
-    // x="url(./lib/"+skyIcon+")"
-    // document.getElementById('sky').style.backgroundImage="url(./images/"+icon+")";
+  
+    // document.getElementById('sky').style.backgroundImage="url(./images/09-rain.jpg)";
     document.getElementById('sky').style.backgroundImage="url(./images/"+icon+")";
+    document.getElementById('city').style.backgroundImage="url(./images/city.png)";
     let TemperatureDiv = document.createElement("div");
     TemperatureDiv.classList.add("temperature");
     $(".weather").append(TemperatureDiv);
