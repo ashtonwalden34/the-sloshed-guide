@@ -3,11 +3,7 @@ let nameInput=''
     searchResults=['']
     WeatherSearchResults=['']
 
-   
-    // api search 
-    //     by 
-    //     zipcode
-
+// api search by zipcode
 
 let zipBtn=document.getElementById("searchInput2")
 zipBtn.addEventListener("keyup", function(event) {
@@ -20,57 +16,7 @@ zipBtn.addEventListener("keyup", function(event) {
     }});
     
 
-    function breweryByZip() {
-    
-        let queryURL = "https://api.openbrewerydb.org/breweries?by_postal="+zipInput;
-        console.log(zipInput)
-        console.log(queryURL)
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        }).then(function(response){  
-            
-    
-    
-             searchResults = response;
-           
-            searchZipWeather()
-            //variables to capture API response properties
-            
-            
-        })}
-        function searchZipWeather() {
-    
-            let queryURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipInput + "&units=imperial&appid=db5176658b0dab6a2aa19e11a0e01748";
-            
-        
-            $.ajax({
-                url: queryURL,
-                method: "GET"
-            }).then(function(response) {
-                WeatherSearchResults = response
-                console.log(WeatherSearchResults)
-                //variables to capture API response properties
-                let name = response.name;
-                let tempKelvin = response.main.temp;
-                let tempC = (tempKelvin - 273.15).toFixed(1);
-                let tempF = (tempC * 1.8 + 32).toFixed(0);
-        
-              addbrew()
-            })};
-
-      
-
-     
-
- 
-        
-     
-
-// search
-//     by  
-//        Name
-
+// search by name
 
             // get values from name button
      let nameBtn=document.getElementById("searchInput1")
@@ -84,13 +30,10 @@ zipBtn.addEventListener("keyup", function(event) {
         }});
 
 
-
-
                 // Query to "get" brewery by name api data
         function breweryBySearchTerm() {
     
             let queryURL = "https://api.openbrewerydb.org/breweries/search?query="+nameInput;
-            console.log(queryURL);
         
             $.ajax({
                 url: queryURL,
@@ -198,9 +141,25 @@ zipBtn.addEventListener("keyup", function(event) {
     }
     // x="url(./lib/"+skyIcon+")"
     document.getElementById('sky').style.backgroundImage="url(./images/"+icon+")";
-    let TemperatureDiv = document.createElement("div");
-    TemperatureDiv.classList.add("temperature");
-    $(".weather").append(TemperatureDiv);
-    TemperatureDiv.innerHTML = WeatherSearchResults.main.temp+" "+"F°";
-    console.log(TemperatureDiv)
+    // let TemperatureDiv = document.createElement("div");
+
+    //variables to capture API response properties
+    let tempF = WeatherSearchResults.main.temp.toFixed(1);
+    let tempC = ((tempF - 32)/1.8).toFixed(0);
+    let windSpeed = WeatherSearchResults.wind.speed;
+
+    // div to hold and display current weather data for the searched city
+    let currentWeatherDiv = $("<div class='weather'>");
+
+    //compile and display current temperature information
+    let pTemp = $("<p>").text("Temperature: " + tempF + "° F" + " (" + tempC + "° C)");
+    currentWeatherDiv.append(pTemp);
+
+    //wind speed information
+    let pWindSpeed = $("<p>").text("Wind Speed: " + windSpeed + " MPH");
+    currentWeatherDiv.append(pWindSpeed);
+
+    //placing all current weather variables into HTML
+    $(".weather").prepend(currentWeatherDiv);
+
    }
