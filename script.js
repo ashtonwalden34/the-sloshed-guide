@@ -167,7 +167,7 @@ zipBtn.addEventListener("keyup", function(event) {
     switch (iconId ){
       case 01:
     //   clear skys 
-      icon= "01.jpg";
+      icon= "lightning.jpg";
         break;
       case 02:
     //   few clouds 
@@ -192,7 +192,7 @@ zipBtn.addEventListener("keyup", function(event) {
         break;
       case 11:
     //   thunder  
-      icon="01.jpg";
+      icon="lightning.jpg";
         break;
         case 13:
       default:
