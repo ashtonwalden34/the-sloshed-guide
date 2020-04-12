@@ -123,7 +123,7 @@ zipBtn.addEventListener("keyup", function(event) {
     // document.getElementById('today').style.backgroundImage="url(./lib/"+iconId+"d.png)"
     iconId=WeatherSearchResults.weather[0].icon.slice(0,2)
     icon=""
-    
+
     var skyIcon;
     switch (iconId ){
       case 01:
@@ -172,5 +172,4 @@ zipBtn.addEventListener("keyup", function(event) {
     TemperatureDiv.classList.add("temperature");
     $(".weather").append(TemperatureDiv);
     TemperatureDiv.innerHTML = WeatherSearchResults.main.temp+" "+"F°";
-    console.log(TemperatureDiv)
    }
