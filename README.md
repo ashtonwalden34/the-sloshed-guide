@@ -44,4 +44,4 @@ Tech we used to get our application to work:
 | [David Shober](https://github.com/Shobes1421) | Design, HTML, CSS   |
 ​
 ### Roadmap 
-Future API integration of google maps so the User can get directions to the brewery they would like to visit.
+Future API integration of google maps so the user can get directions to the brewery they would like to visit.
