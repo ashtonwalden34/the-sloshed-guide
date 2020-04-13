@@ -5,7 +5,7 @@
 
 The Sloshed Guide is an app that gives the user access to a large database of local breweries. 
 The user can search either a specific brewery or search by their zip code.
- Once the user finds the desired brewery, they will be given the address and the weather conditions in the brewery's area.
+Once the user finds the desired brewery, they will be given the address and the weather conditions in the brewery's area.
 ​
 ### [Launch Project 1 >]( https://ashtonwalden34.github.io/the-sloshed-guide/)
 ​
