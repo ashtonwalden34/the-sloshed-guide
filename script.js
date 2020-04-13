@@ -161,5 +161,6 @@ zipBtn.addEventListener("keyup", function(event) {
 
     //placing all current weather variables into HTML
     $(".weather").prepend(currentWeatherDiv);
+    console.log(currentWeatherDiv)
 
    }
