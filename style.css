@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> 7db5984d705844007f64741cb8ed39c6586d3a84
 header {
     text-align: center;
     height: 10vh;
@@ -118,17 +121,27 @@ font-family: ultra;
         width:100vw
     }
     .weather{
-        height: 20vh;
-        width: 30vw;
+        height: 200px;
+        width: 300px;
+        background-color: white;
+        color: black;
+        font: 32px;
         
-        text-shadow: 0px 0px 10px rgba(255,255,255,0.6), 0px 0px 30px rgba(255,255,255,0.4), 0px 0px 50px rgba(255,255,255,0.3), 0px 0px 180px rgba(255,255,255,0.3);
-	color: rgba(255,255,255,0);
-    font: 80px 'ChunkFiveRegular';
+        /* text-shadow: 0px 0px 10px rgba(255,255,255,0.6), 0px 0px 30px rgba(255,255,255,0.4), 0px 0px 50px rgba(255,255,255,0.3), 0px 0px 180px rgba(255,255,255,0.3); */
+/* 
+    font: 300px 'ChunkFiveRegular';
     position: absolute;
     top: 3vh;
+<<<<<<< HEAD
+    left: 3vw; */
+    }
+
+      
+=======
     left: 3vw;
     }
 
     
     
    
+>>>>>>> 7db5984d705844007f64741cb8ed39c6586d3a84
