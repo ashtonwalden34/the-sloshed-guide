@@ -17,9 +17,9 @@ Once the user finds the desired brewery, they will be given the address and the 
 
 
 ### Features
-- Dynamic weather feature that when a brewery is selected the background will  change according to its current weather condition.
-- Current temperature will display of selected brewery.
-- Address is given when brewery is searched.
+- Dynamic weather feature that when a city or zip code is searched the background will change according to its current weather condition.
+- Current temperature will display of selected city or zip code.
+- Summary list of Breweries meeting search parameters including name, Address, phone number, web address is given when search is executed.
 
 ​
 ### Tech
@@ -44,4 +44,5 @@ Tech we used to get our application to work:
 | [David Shober](https://github.com/Shobes1421) | Design, HTML, CSS   |
 ​
 ### Roadmap 
-Future API integration of google maps so the user can get directions to the brewery they would like to visit.
+Future API integration of UBER/LYFT so the user can get directions, driver availability, cost estimate to the brewery they would like to visit.
+Future API integration of Geolocation to allow the user to search for breweries in their immediate area utilizing the geolocation of the device.
