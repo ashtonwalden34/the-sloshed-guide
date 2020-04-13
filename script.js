@@ -3,12 +3,9 @@ let nameInput=''
     searchResults=['']
     WeatherSearchResults=['']
 
-   
-    // api search 
-    //     by 
-    //     zipcode
 
-//  event listener for zipcode input2
+// api search by zipcode
+
 let zipBtn=document.getElementById("searchInput2")
 zipBtn.addEventListener("keyup", function(event) {
      if (event.keyCode === 13) {
@@ -17,6 +14,7 @@ zipBtn.addEventListener("keyup", function(event) {
     $("#searchInput2").val("")
     }});
     
+
         // api Query
     function breweryByZip() {
     
@@ -45,7 +43,6 @@ zipBtn.addEventListener("keyup", function(event) {
 //     by  
 //        Name
 
-
             // get values from name button
      let nameBtn=document.getElementById("searchInput1")
     nameBtn.addEventListener("keyup", function(event) {
@@ -57,15 +54,15 @@ zipBtn.addEventListener("keyup", function(event) {
         }});
 
 
-
-
                 // Query to "get" brewery by name api data
         function breweryBySearchTerm() {
+
               let queryURL = "https://api.openbrewerydb.org/breweries/search?query="+nameInput;
            
               $.ajax({url: queryURL,method: "GET"})
               .then(function(response) {
           //variables to capture API response properties
+
                  searchResults = response;
               searchCityWeather();  
             })};
@@ -167,9 +164,27 @@ zipBtn.addEventListener("keyup", function(event) {
   
     // document.getElementById('sky').style.backgroundImage="url(./images/09-rain.jpg)";
     document.getElementById('sky').style.backgroundImage="url(./images/"+icon+")";
-    document.getElementById('city').style.backgroundImage="url(./images/city.png)";
-    let TemperatureDiv = document.createElement("div");
-    TemperatureDiv.classList.add("temperature");
-    $(".weather").append(TemperatureDiv);
-    TemperatureDiv.innerHTML = WeatherSearchResults.main.temp+" "+"F°";
+
+    // let TemperatureDiv = document.createElement("div");
+
+    //variables to capture API response properties
+    let tempF = WeatherSearchResults.main.temp.toFixed(1);
+    let tempC = ((tempF - 32)/1.8).toFixed(0);
+    let windSpeed = WeatherSearchResults.wind.speed;
+
+    // div to hold and display current weather data for the searched city
+    let currentWeatherDiv = $("<div class='weather'>");
+
+    //compile and display current temperature information
+    let pTemp = $("<p>").text("Temperature: " + tempF + "° F" + " (" + tempC + "° C)");
+    currentWeatherDiv.append(pTemp);
+
+    //wind speed information
+    let pWindSpeed = $("<p>").text("Wind Speed: " + windSpeed + " MPH");
+    currentWeatherDiv.append(pWindSpeed);
+
+    //placing all current weather variables into HTML
+    $(".weather").prepend(currentWeatherDiv);
+
+
    }
