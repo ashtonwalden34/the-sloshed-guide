@@ -1,5 +1,5 @@
 # the-sloshed-guide
-![Screenshot of Application](https://via.placeholder.com/680x340/999999/efefef/?text=Screenshot)
+![Image description](https://github.com/jherd801/homework6/blob/master/assets/weatherScreenshot.png)
 ​
 
 The Sloshed Guide is an app that gives the user access to a large database of local breweries. 
