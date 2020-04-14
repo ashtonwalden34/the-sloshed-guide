@@ -111,7 +111,8 @@ zipBtn.addEventListener("keyup", function(event) {
                    // Adds onclick event for website_url    
    
     }}   
-      createweather()}
+      createweather();
+      createWeather2()}
 
 
 
@@ -165,7 +166,33 @@ zipBtn.addEventListener("keyup", function(event) {
     // document.getElementById('sky').style.backgroundImage="url(./images/09-rain.jpg)";
     document.getElementById('sky').style.backgroundImage="url(./images/"+icon+")";
 
-    // let TemperatureDiv = document.createElement("div");
+    // // let TemperatureDiv = document.createElement("div");
+
+    // //variables to capture API response properties
+    // let tempF = WeatherSearchResults.main.temp.toFixed(1);
+    // let tempC = ((tempF - 32)/1.8).toFixed(0);
+    // let windSpeed = WeatherSearchResults.wind.speed;
+
+    // // div to hold and display current weather data for the searched city
+    // let currentWeatherDiv = $("<div class='weather'>");
+
+    // //compile and display current temperature information
+    // let pTemp = $("<p>").text("Temperature: " + tempF + "° F" + " (" + tempC + "° C)");
+    // currentWeatherDiv.append(pTemp);
+
+    // //wind speed information
+    // let pWindSpeed = $("<p>").text("Wind Speed: " + windSpeed + " MPH");
+    // currentWeatherDiv.append(pWindSpeed);
+
+    // //placing all current weather variables into HTML
+    // $(".weather").prepend(currentWeatherDiv);
+    // console.log(currentWeatherDiv)
+
+
+   }
+
+   function createWeather2 () {
+         // let TemperatureDiv = document.createElement("div");
 
     //variables to capture API response properties
     let tempF = WeatherSearchResults.main.temp.toFixed(1);
@@ -186,6 +213,4 @@ zipBtn.addEventListener("keyup", function(event) {
     //placing all current weather variables into HTML
     $(".weather").prepend(currentWeatherDiv);
     console.log(currentWeatherDiv)
-
-
    }
